@@ -2,9 +2,7 @@ const Stack = {
   bindKeys(){
     document.addEventListener('keyup', event => {
       if (event.ctrlKey && event.key === 's') {
-        setTimeout(() => {
-          $('.has-changes').click()
-        }, 1000)
+        $('.has-changes').click()
       }
     })
   }
@@ -12,4 +10,4 @@ const Stack = {
 
 Stack.bindKeys()
 
-console.log(222)
+console.log(333)
