@@ -1,7 +1,7 @@
 const Stack = {
   bindKeys(){
     document.addEventListener('keyup', e => {
-      console.log(e.key)
+      console.log(e, e.key)
 
     })
   }
