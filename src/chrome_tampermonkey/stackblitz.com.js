@@ -1,5 +1,5 @@
 const Stack = {
   bindKeys(){
-    console.log('11111');
+    console.log('ddd');
   }
 }
