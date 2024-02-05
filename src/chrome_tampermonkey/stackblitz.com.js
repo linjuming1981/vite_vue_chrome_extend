@@ -9,5 +9,3 @@ const Stack = {
 }
 
 Stack.bindKeys()
-
-console.log(333)
