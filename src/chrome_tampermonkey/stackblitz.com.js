@@ -8,4 +8,5 @@ const Stack = {
 }
 
 Stack.bindKeys()
-console.log(111111111)
+
+console.log(222)
