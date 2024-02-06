@@ -9,6 +9,7 @@
 <script>
 
 export default {
+  emits: ['setAction'],
   components: {},
   props: {},
   data () {

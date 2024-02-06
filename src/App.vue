@@ -1,20 +1,27 @@
 <template>
-  <div>
-    
+  <div class="app">
+    <Header @setAction="setAction" />
   </div>
 </template>
 <script>
+import Header from '@/components/Header/Header.vue';
 export default {
-  components: {},
+  components: {Header},
   props: {},
   data () {
-    return {};
+    return {
+      action: 'header',
+    };
   },
   computed: {},
   watch: {},
   created () {},
   mounted () {},
-  methods: {},
+  methods: {
+    setAction(action){
+      this.action = action
+    }
+  },
 };
 </script>
 <style lang="less" scoped>
