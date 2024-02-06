@@ -8,6 +8,7 @@ export default class ApiHeader{
       console.log('监听网址', res.url);
     }
     
+    console.log('222222', chrome);
     const Before = chrome.webRequest.onBeforeSendHeaders
     if(!Before.hasListener(listener)){
       Before.addListener(listener, 
