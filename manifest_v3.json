@@ -9,6 +9,7 @@
     "service_worker": "./src/background/background.js"
   },
   "premissions": [
+    "webRequest",
     "declarativeNetRequest"
   ]
 }
