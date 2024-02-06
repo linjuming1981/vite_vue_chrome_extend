@@ -1,8 +1,8 @@
 <template>
   <div>
     <el-radio-group v-model="action" @change="actionChange">
-      <el-radio label="header">添加header</el-radio>
-      <el-radio label="other">其他</el-radio>
+      <el-radio-button label="header">添加header</el-radio-button>
+      <el-radio-button label="other">其他</el-radio-button>
     </el-radio-group>
     <el-button @click="actionChange(1)">fff1231</el-button>
   </div>
