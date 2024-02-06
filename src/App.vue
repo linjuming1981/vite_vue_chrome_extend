@@ -19,6 +19,7 @@ export default {
   mounted () {},
   methods: {
     setAction(action){
+      console.log('22222', action);
       this.action = action
     }
   },
