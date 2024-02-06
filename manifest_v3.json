@@ -10,7 +10,7 @@
   },
   "permissions": [
     "webRequest",
-    "tab",
+    "tabs",
     "declarativeNetRequest",
     "declarativeNetRequestFeedback"
   ],
