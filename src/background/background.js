@@ -1,6 +1,13 @@
 import ApiHeader from "./ApiHeader.class.js";
 
-console.log('1111', chrome.webRequest.onBeforeSendHeaders);
 const apiHeader = new ApiHeader()
 apiHeader.listen()
-console.log('-----');
+
+// 跟前端交互
+const listener = (request, sender, sendResponse) => {
+  if(request.action === 'getCurPageHeaders'){
+    console.log('backgournd 111');
+    sendResponse({data: 'dddddddd'})
+  }
+}
+chrome.runtime.onMessage.addListener(listener)

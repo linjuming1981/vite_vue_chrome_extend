@@ -1,12 +1,14 @@
 <template>
   <div class="app">
     <Header @setAction="setAction" />
+    <HeaderEditor v-if="action==='header'" />
   </div>
 </template>
 <script>
 import Header from '@/components/Header/Header.vue';
+import HeaderEditor from '@/components/HeaderEditor/HeaderEditor.vue';
 export default {
-  components: {Header},
+  components: {Header, HeaderEditor},
   props: {},
   data () {
     return {
