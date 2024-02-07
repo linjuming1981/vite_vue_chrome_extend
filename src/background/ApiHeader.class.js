@@ -5,7 +5,7 @@ export default class ApiHeader{
 
   listen(){
     const listener = res => {
-      console.log('监听网址', res.url);
+      console.log('监听网址', res);
     }
     
     console.log('222222', chrome);
