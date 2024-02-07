@@ -2,6 +2,7 @@ import ApiHeader from "./ApiHeader.class.js";
 
 const apiHeader = new ApiHeader()
 apiHeader.listen()
+apiHeader.bindTabChange()
 
 // 跟前端交互
 const listener = (request, sender, sendResponse) => {

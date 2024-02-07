@@ -8,7 +8,6 @@ export default class ApiHeader{
       console.log('监听网址', res);
     }
     
-    console.log('222222', chrome);
     const Before = chrome.webRequest.onBeforeSendHeaders
     if(!Before.hasListener(listener)){
       Before.addListener(listener, 
@@ -16,5 +15,11 @@ export default class ApiHeader{
         ['requestHeaders', 'extraHeaders']
       )
     }
+  }
+
+  bindTabChange(){
+    chrome.tabs.onActivated.addListener(activeInfo => {
+      console.log('tab change to', activeInfo);
+    })
   }
 }
