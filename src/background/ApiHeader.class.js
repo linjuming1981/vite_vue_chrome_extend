@@ -16,7 +16,7 @@ export default class ApiHeader{
     const listener = res => {
       // console.log('监听网址', res);
       let url = res.url.replace(/\?.*$/, '')
-      if(/\..*$/.test(url)){
+      if(/\.[^\.]*$/.test(url)){
         return
       }
       let list = this.list.filter(n => n.url !== url)
