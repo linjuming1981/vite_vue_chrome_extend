@@ -6,6 +6,7 @@ export default class ApiHeader{
   }
 
   initList(){
+    console.log('initList');
     chrome.storage.local.get(this.skey, res => {
       this.list = res[this.skey] || []
       console.log('this.list', this.list);
@@ -26,6 +27,7 @@ export default class ApiHeader{
       })
       list = list.slice(0, 20)
       console.log('set list', list);
+      this.list = list
       chrome.storage.local.set({[this.skey]: list})
     }
     
