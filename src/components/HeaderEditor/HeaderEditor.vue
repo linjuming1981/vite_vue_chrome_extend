@@ -1,6 +1,6 @@
 <template>
   <div class="HeaderEditor">
-    <el-button @click="getCurPageHeaders()">获取当前页面headers</el-button>
+    <el-button @click="getCurPageHeaders()">aa获取当前页面headers</el-button>
   </div>
 </template>
 <script>
