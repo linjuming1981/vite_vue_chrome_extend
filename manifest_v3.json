@@ -3,6 +3,7 @@
   "name": "linjuming chrome实验室",
   "version": "1.0.1",
   "action": {
+    "default_icon": "icon.png"
   },
   "background": {
     "service_worker": "./src/background/background.js"

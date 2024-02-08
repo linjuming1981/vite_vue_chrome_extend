@@ -15,7 +15,7 @@ chrome.runtime.onMessage.addListener(listener)
 
 chrome.action.onClicked.addListener((tab) => {
   let url = chrome.runtime.getURL("index.html");
-
+  console.log(33333)
   chrome.windows.create({
     url: url,
     type: "popup",
