@@ -4,13 +4,17 @@ export const getCurPageInfo = (key) => {
       let url = tabs[0].url
       let match = url.match(/https?:\/\/([^/]+)\/([^\?]+)/)
       console.log(111, match)
+      if(!match){
+        let res = key? null: {}
+        return resolve(res)
+      }
       let [, host, path] = match
       let info = {
         host, 
         path,
         title: tabs[0].title
       }
-      console.log('getCurPageInfo', res);
+      console.log('getCurPageInfo', info);
       if(!key){
         return resolve(info)
       }
