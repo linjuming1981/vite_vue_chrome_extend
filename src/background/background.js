@@ -13,7 +13,13 @@ const listener = (request, sender, sendResponse) => {
 }
 chrome.runtime.onMessage.addListener(listener)
 
-chrome.browserAction.onClicked.addListener(function(tab) {
-  chrome.tabs.create({'url': chrome.extension.getURL('index.html')}, function(window) {
+chrome.action.onClicked.addListener((tab) => {
+  let url = chrome.runtime.getURL("index.html");
+
+  chrome.windows.create({
+    url: url,
+    type: "popup",
+    height: 600,
+    width: 800,
   });
 });
