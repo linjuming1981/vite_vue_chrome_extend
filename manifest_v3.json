@@ -13,8 +13,8 @@
     "webRequest",
     "tabs",
     "storage",
-    "declarativeNetRequest",
     "declarativeNetRequestFeedback",
+    "declarativeNetRequest",
     "scripting"
   ],
   "host_permissions": [
