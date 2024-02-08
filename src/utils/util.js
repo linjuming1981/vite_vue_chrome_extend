@@ -5,8 +5,7 @@ export const getCurPageInfo = (key) => {
       let match = url.match(/https?:\/\/([^/]+)\/([^\?]+)/)
       console.log(111, match)
       if(!match){
-        let res = key? null: {}
-        return resolve(res)
+        return resolve(null)
       }
       let [, host, path] = match
       let info = {

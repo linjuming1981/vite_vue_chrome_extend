@@ -12,3 +12,8 @@ const listener = (request, sender, sendResponse) => {
   }
 }
 chrome.runtime.onMessage.addListener(listener)
+
+chrome.browserAction.onClicked.addListener(function(tab) {
+  chrome.tabs.create({'url': chrome.extension.getURL('index.html')}, function(window) {
+  });
+});

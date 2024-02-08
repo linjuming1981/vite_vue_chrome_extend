@@ -33,6 +33,7 @@ export default class ApiHeader{
       }
 
       let pageInfo = await this.getCurPageInfo()
+      if(!pageInfo) return;
       let list = this.list.filter(n => n.url !== apiUrl)
       list.unshift({
         apiUrl,
