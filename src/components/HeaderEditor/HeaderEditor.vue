@@ -4,6 +4,8 @@
   </div>
 </template>
 <script>
+import chromeStoreApi from '@/apis/chromeStoreApi';
+
 export default {
   components: {},
   props: {},
@@ -33,11 +35,16 @@ export default {
     },
     async getCurPageHeaders(){
       let url = await this.getCurWinUrl()
-      chrome.runtime.sendMessage({
-        action: 'getCurPageHeaders',
-      }, res => {
-        console.log('curPageHeaders', res);
-      })
+      // chrome.runtime.sendMessage({
+      //   action: 'getCurPageHeaders',
+      // }, res => {
+      //   console.log('curPageHeaders', res);
+      // })
+
+      let headers = await chromeStoreApi.getPageHeaders()
+      console.log('1111 getCurPageHeaders', headers);
+      this.headers = headers
+
     }
   },
 };

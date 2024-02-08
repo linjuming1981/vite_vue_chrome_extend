@@ -1,7 +1,9 @@
+import C from "../constants/constants.js";
+
 export default class ApiHeader{
   constructor(){
     this.list = []
-    this.skey = 'apiHeaders'
+    this.skey = C.HEADER_STORE_KEY
     this.initList()
   }
 
