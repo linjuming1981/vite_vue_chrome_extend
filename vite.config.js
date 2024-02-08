@@ -6,13 +6,9 @@ import path from 'node:path';
 import Components from 'unplugin-vue-components/vite';
 import {ElementPlusResolver} from 'unplugin-vue-components/resolvers';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   build: {
     minify: false,
-    // rollupOptions: {
-    //   input: '/index.html',
-    // }
   },
   resolve: {
     alias: {
