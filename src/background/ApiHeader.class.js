@@ -58,6 +58,7 @@ export default class ApiHeader{
   bindTabChange(){
     chrome.tabs.onActivated.addListener(activeInfo => {
       console.log('tab change to', activeInfo);
+      this.pageInfo = null
     })
   }
 }
