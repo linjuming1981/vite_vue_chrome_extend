@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <a href="扩展网址：{{ plugPopupUrl }}"></a>
+      <a :href="plugPopupUrl">扩展网址</a>
     </div>
     <el-radio-group v-model="action">
       <el-radio-button label="header">添加header</el-radio-button>
