@@ -3,6 +3,7 @@ export const getCurPageInfo = (key) => {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
       let url = tabs[0].url
       let match = url.match(/https?:\/\/([^/]+)\/([^\?]+)/)
+      console.log(111, match)
       let [, host, path] = match
       let info = {
         host, 
