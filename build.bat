@@ -1,2 +1,1 @@
-call npm run build
-pause
+call npm run build-w
