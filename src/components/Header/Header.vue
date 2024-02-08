@@ -17,7 +17,7 @@ export default {
   props: {},
   data () {
     return {
-      plugPopupUrl: chrome.runtime.getURL('index.html'),
+      plugPopupUrl: chrome?.runtime?.getURL?.('index.html'),
       action: 'header'
     };
   },
