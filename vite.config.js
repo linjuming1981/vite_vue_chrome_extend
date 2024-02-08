@@ -10,6 +10,9 @@ import {ElementPlusResolver} from 'unplugin-vue-components/resolvers';
 export default defineConfig({
   build: {
     minify: false,
+    rollupOptions: {
+      input: '/index.html',
+    }
   },
   resolve: {
     alias: {
