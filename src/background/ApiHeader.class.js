@@ -28,7 +28,7 @@ export default class ApiHeader{
   listen(){
     const listener = async res => {
       let apiUrl = res.url.replace(/\?.*$/, '')
-      if(/\.[^\.\/]*$/.test(url)){
+      if(/\.[^\.\/]*$/.test(apiUrl)){
         return
       }
 
