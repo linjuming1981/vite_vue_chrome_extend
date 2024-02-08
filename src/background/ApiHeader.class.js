@@ -1,10 +1,20 @@
 import C from "../constants/constants.js";
+import {getCurPageInfo} from '@/utils/util.js'
 
 export default class ApiHeader{
   constructor(){
     this.list = []
+    this.pageUrl = ''
     this.skey = C.HEADER_STORE_KEY
+    this.pageInfo = null
     this.initList()
+  }
+
+  async getCurPageInfo(){
+    if(!this.pageInfo){
+      this.pageInfo = await getCurPageInfo()
+    }
+    return this.pageInfo
   }
 
   initList(){
@@ -16,16 +26,19 @@ export default class ApiHeader{
   }
 
   listen(){
-    const listener = res => {
-      // console.log('监听网址', res);
-      let url = res.url.replace(/\?.*$/, '')
+    const listener = async res => {
+      let apiUrl = res.url.replace(/\?.*$/, '')
       if(/\.[^\.\/]*$/.test(url)){
         return
       }
+
+      let pageInfo = await this.getCurPageInfo()
       let list = this.list.filter(n => n.url !== url)
       list.unshift({
-        url,
-        headers: res.requestHeaders
+        apiUrl,
+        apiHeaders: res.requestHeaders,
+        pageHost: pageInfo.host,
+        pagePath: pageInfo.path
       })
       list = list.slice(0, 20)
       console.log('set list', list);
