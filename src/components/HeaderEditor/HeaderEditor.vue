@@ -12,12 +12,7 @@ export default {
   props: {},
   data () {
     return {
-      headers: [
-        {
-          apiPath: '',
-          headerKeys: []
-        }
-      ]
+      headers: [],
     };
   },
   computed: {},

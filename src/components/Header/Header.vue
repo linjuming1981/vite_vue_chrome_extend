@@ -1,5 +1,8 @@
 <template>
   <div>
+    <div>
+      <a href="{{ plugPopupUrl }}"></a>
+    </div>
     <el-radio-group v-model="action">
       <el-radio-button label="header">添加header</el-radio-button>
       <el-radio-button label="other">其他</el-radio-button>
@@ -14,6 +17,7 @@ export default {
   props: {},
   data () {
     return {
+      plugPopupUrl: chrome.runtime.getURL('index.html'),
       action: 'header'
     };
   },

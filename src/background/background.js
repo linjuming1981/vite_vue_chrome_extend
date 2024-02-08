@@ -13,6 +13,7 @@ const listener = (request, sender, sendResponse) => {
 }
 chrome.runtime.onMessage.addListener(listener)
 
+// 调试点击图标，无效
 chrome.action.onClicked.addListener((tab) => {
   let url = chrome.runtime.getURL("index.html");
   console.log(33333)

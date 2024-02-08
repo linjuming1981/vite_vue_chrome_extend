@@ -5,7 +5,6 @@ export default {
     return new Promise(resolve => {
       chrome.storage.local.get(C.HEADER_STORE_KEY, res => {
         let list = res[C.HEADER_STORE_KEY]
-        debugger
         if(host){
           list = list.filter(n => {
             return n.pageHost === host
